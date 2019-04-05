@@ -1,7 +1,14 @@
+/* -------------------------------------------------------------------- */
+/* basic setup */
+/* -------------------------------------------------------------------- */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+h1{
+    margin: 0px;
 }
 
 html{
@@ -13,7 +20,115 @@ html{
     text-rendering: optimizeLegibility;
 }
 
+
+/* -------------------------------------------------------------------- */
+/* common */
+/* -------------------------------------------------------------------- */
+
 .row{
     max-width: 1140px;
     margin: 0 auto;
+}
+
+.btn:link, 
+.btn:visited{
+    display: inline-block; /* not new line */
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;    
+    border-radius: 200px;
+    border: 2px solid #fbc531;
+    transition: background-color 0.2s, border 0.2s, color 0.2s; /* css3; animation */
+}
+
+.btn-full:link,
+.bti-full:visited{
+    color:#fff;
+    background-color: #00a8ff;    
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    color:  #fbc531;
+}
+
+.btn:hover,
+.btn:active{
+    background-color: #006599; /* created using 0to255 website*/    
+}
+
+.btn-full:hover,
+.bti-full:active{
+    color: white;
+    background-color: #006599;    
+}
+
+.btn-ghost:hover,
+.btn-ghost:active{
+    color:  #fff;
+}
+
+/* -------------------------------------------------------------------- */
+/* header */
+/* -------------------------------------------------------------------- */
+
+header{
+    /* we have two backgroung thingy */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/veg.jpg); 
+    background-size: cover; /* we want to see whole image */
+    background-position: center;
+    height: 100vh; /* this means 100% of view port */
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*  */
+}
+
+.hero-text-box h1{
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%; /* we want all element to be relative, not pixel */
+    font-weight: 300; /* we are reducing because we have big fonts */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;    
+}
+
+.logo{
+    height: 100px;
+    width: auto; /* to ratio */
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav{
+    float: right;
+    list-style: none;
+}
+
+.main-nav li{
+    display: inline-block; /* so that they come in one line*/
+    margin-left: 40px;
+    margin-top:60px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%; /* how did you calculate this? :) if you look above in html. font size is 20 (base fonnt size). so 18px/20= 0.90 */
+    border-bottom: 2px solid transparent;
+    transition: border 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #00a8ff;
 }
