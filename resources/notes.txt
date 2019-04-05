@@ -36,3 +36,19 @@ hRp://www.rocket-design.fr/color-template/
 
 Learn even more about colors:
 hRp://webdesign.tutsplus.com/ar.cles/an-introduc.on-to-color-theory-for-web- designers--webdesign-1437
+
+
+Beau.ful icon font:
+hRp://ionicons.com/
+
+Another beau.ful icon set:
+hRp://entypo.com/
+
+Font awesome icons:
+hRp://fontawesome.io/icons/
+
+Big collec.on of SVG fonts:
+hRp://iconmonstr.com/
+
+Yet another icon font:
+hRp://icon-works.com/
