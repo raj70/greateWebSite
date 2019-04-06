@@ -4,20 +4,22 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 h1 {
     margin: 0px;
 }
 
-html {
+html,body {
     background-color: #fff;
     color: rgb(94, 94, 94);
     font-family: 'Lato', 'Arial', sans-serif;
     font-size: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 a:link,
@@ -25,6 +27,7 @@ a:visited{
     color: #fbc531;
     text-decoration: none;
     border-bottom: 1px solid #00a8ff;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s;
 }
 
@@ -122,6 +125,7 @@ input[type=submit] {
     text-decoration: none;
     border-radius: 200px;
     border: 2px solid #fbc531;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
     /* css3; animation */
 }
@@ -167,7 +171,8 @@ header {
     * 1 is background colour with opacity 70%
     * 2 is background image
     */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/veg.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/veg-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/veg-min.jpg);
     /* we want to see whole image */
     background-size: cover;    
     background-position: center;
@@ -179,10 +184,11 @@ header {
 
 .hero-text-box {
     position: absolute;
-    max-width: 1140px;
+    width: 1140px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     /*  */
 }
 
@@ -206,11 +212,21 @@ header {
     margin-top: 20px;
 }
 
+.logo-black {
+    display: none;
+    height: 50px;
+    width: auto;
+    /* to ratio */
+    float: left;
+    margin: 5px 0;
+}
+
 .main-nav {
     float: right;
     list-style: none;
 }
 
+/* main navi */
 .main-nav li {
     display: inline-block;
     /* so that they come in one line*/
@@ -227,6 +243,7 @@ header {
     font-size: 90%;
     /* how did you calculate this? :) if you look above in html. font size is 20 (base fonnt size). so 18px/20= 0.90 */
     border-bottom: 2px solid transparent;
+    -webkit-transition: border 0.2s;
     transition: border 0.2s;
 }
 
@@ -234,6 +251,30 @@ header {
 .main-nav li a:active {
     border-bottom: 2px solid #00a8ff;
 }
+
+/* sticky navi */
+.sticky{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.90);
+    box-shadow: 0 2px 2px #ccc;
+    z-index: 99999;
+}
+
+.sticky .main-nav {
+    margin-top: -45px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 8px 0;
+    color: #555;
+}
+
+.sticky .logo { display: none;}
+.sticky .logo-black { display: block;}
 
 .box {
     padding: 1%;
@@ -293,14 +334,19 @@ header {
     width: 100%;
     height: auto;
     /* img will be 115 %, initially */
-    transform: scale(1.15);    
-    transition: transform 0.5s, opacity 0.5s;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);    
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;    
+    transition: opacity 0.5s, -webkit-transform 0.5s;    
+    transition: transform 0.5s, opacity 0.5s;    
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
     opacity: 0.7;
 }
 
 .meal-photo img:hover {
     /* images reduce to 103% from 115% */
-    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
     opacity: 1;
 }
 
@@ -408,6 +454,7 @@ header {
 /* -------------------------------------------------------------------- */
 
 .section-testimonials {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(145, 143, 143, 0.50)),to(rgba(145, 143, 143, 0.50))), url(img/ocean.jpg);
     background-image: linear-gradient(rgba(145, 143, 143, 0.50),rgba(145, 143, 143, 0.50)), url(img/ocean.jpg);
     background-size: cover;
     /* we want to see whole image */
@@ -523,4 +570,17 @@ input[type=checkbox]{
 
 .my-contact div{
     display: inline;
+}
+
+/* -------------------------------------------------------------------- */
+/* animation */
+/* -------------------------------------------------------------------- */
+
+.js--wp-1{
+    opacity: 0;
+}
+
+.js--wp-1.animated{
+    opacity: 1;
+
 }
