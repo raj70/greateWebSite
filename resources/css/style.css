@@ -1,17 +1,17 @@
 /* -------------------------------------------------------------------- */
 /* basic setup */
 /* -------------------------------------------------------------------- */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h1{
+h1 {
     margin: 0px;
 }
 
-html{
+html {
     background-color: #fff;
     color: rgb(94, 94, 94);
     font-family: 'Lato', 'Arial', sans-serif;
@@ -20,159 +20,212 @@ html{
     text-rendering: optimizeLegibility;
 }
 
+a:link,
+a:visited{
+    color: #fbc531;
+    text-decoration: none;
+    border-bottom: 1px solid #00a8ff;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active{
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
 
 /* -------------------------------------------------------------------- */
 /* common */
 /* -------------------------------------------------------------------- */
 
-.row{
+.row {
     max-width: 1140px;
-    margin: 0 auto; /* to make centre */
+    margin: 0 auto;
+    /* to make centre */
 }
 
-section{
+section {
     padding: 80px 0;
 }
 
-h1, h2, h3{    
-    font-weight: 300; /* we are reducing because we have big fonts */
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    /* we are reducing because we have big fonts */
     text-transform: uppercase;
-       
+
 }
 
-h1{
-    letter-spacing: 1px;  
+h1 {
+    letter-spacing: 1px;
     margin-top: 0;
     margin-bottom: 20px;
     color: #fff;
-    font-size: 240%; /* we want all element to be relative, not pixel */
-    word-spacing: 4px;  
+    font-size: 240%;
+    /* we want all element to be relative, not pixel */
+    word-spacing: 4px;
 }
-h2{
-    letter-spacing: 1px;  
+
+h2 {
+    letter-spacing: 1px;
     font-size: 180%;
     word-spacing: 2px;
     text-align: center;
     margin-bottom: 30px;
 }
 
-h2::after{
+/* will display small line under heading */
+h2::after {
     display: block;
     height: 2px;
     background: #00a8ff;
-    content:  " ";
+    content: " ";
     width: 100px;
     margin: 0 auto;
     margin-top: 30px;
 }
 
-h3{
+h3 {
     font-size: 110%;
     word-spacing: 2px;
     margin-bottom: 15px;
 }
 
-.long-copy{
+.long-copy {
     line-height: 145%;
     width: 70%;
-    margin-left: 15%; /* why 15%? because total width is 100%, we have given width is 70%, left is 30%. So left is 15% */
+    margin-left: 15%;
+    /* why 15%? because total width is 100%, we have given width is 70%, left is 30%. So left is 15% */
 }
 
 
-.btn:link, 
-.btn:visited{
-    display: inline-block; /* not new line */
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    /* not new line */
     padding: 10px 30px;
     font-weight: 300;
-    text-decoration: none;    
+    text-decoration: none;
     border-radius: 200px;
     border: 2px solid #fbc531;
-    transition: background-color 0.2s, border 0.2s, color 0.2s; /* css3; animation */
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    /* css3; animation */
 }
 
 .btn-full:link,
-.bti-full:visited{
-    color:#fff;
-    background-color: #00a8ff;    
+.bti-full:visited,
+input[type=submit] {
+    color: #fff;
+    background-color: #00a8ff;
     margin-right: 15px;
 }
 
 .btn-ghost:link,
-.btn-ghost:visited{
-    color:  #fbc531;
+.btn-ghost:visited {
+    color: #fbc531;
 }
 
 .btn:hover,
-.btn:active{
-    background-color: #006599; /* created using 0to255 website*/    
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #006599;
+    /* created using 0to255 website*/
 }
 
 .btn-full:hover,
-.bti-full:active{
+.bti-full:active {
     color: white;
-    background-color: #006599;    
+    background-color: #006599;
 }
 
 .btn-ghost:hover,
-.btn-ghost:active{
-    color:  #fff;
+.btn-ghost:active {
+    color: #fff;
 }
 
 /* -------------------------------------------------------------------- */
 /* header */
 /* -------------------------------------------------------------------- */
 
-header{
-    /* we have two backgroung thingy */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/veg.jpg); 
-    background-size: cover; /* we want to see whole image */
+header {
+    /* we have two background thingy 
+    * 1 is background colour with opacity 70%
+    * 2 is background image
+    */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/veg.jpg);
+    /* we want to see whole image */
+    background-size: cover;    
     background-position: center;
-    height: 100vh; /* this means 100% of view port */
+    /* this means 100% of view port */
+    height: 100vh;
+    /* this gives us nice effect of moving text with fix image background */
+    background-attachment: fixed;
 }
 
-.hero-text-box{
+.hero-text-box {
     position: absolute;
-    width: 1140px;
-    top:50%;
+    max-width: 1140px;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /*  */
+    transform: translate(-50%, -50%);
+    /*  */
 }
 
-.hero-text-box h1{
+.hero-text-box h1 {
     margin-bottom: 20px;
     color: #fff;
-    font-size: 240%; /* we want all element to be relative, not pixel */
-    font-weight: 300; /* we are reducing because we have big fonts */
+    font-size: 240%;
+    /* we want all element to be relative, not pixel */
+    font-weight: 300;
+    /* we are reducing because we have big fonts */
     text-transform: uppercase;
     letter-spacing: 1px;
-    word-spacing: 4px;    
+    word-spacing: 4px;
 }
 
-.logo{
+.logo {
     height: 100px;
-    width: auto; /* to ratio */
+    width: auto;
+    /* to ratio */
     float: left;
     margin-top: 20px;
 }
 
-.main-nav{
+.main-nav {
     float: right;
     list-style: none;
 }
 
-.main-nav li{
-    display: inline-block; /* so that they come in one line*/
+.main-nav li {
+    display: inline-block;
+    /* so that they come in one line*/
     margin-left: 40px;
-    margin-top:60px;
+    margin-top: 60px;
 }
 
 .main-nav li a:link,
-.main-nav li a:visited{
+.main-nav li a:visited {
     padding: 8px 0;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 90%; /* how did you calculate this? :) if you look above in html. font size is 20 (base fonnt size). so 18px/20= 0.90 */
+    font-size: 90%;
+    /* how did you calculate this? :) if you look above in html. font size is 20 (base fonnt size). so 18px/20= 0.90 */
     border-bottom: 2px solid transparent;
     transition: border 0.2s;
 }
@@ -182,24 +235,292 @@ header{
     border-bottom: 2px solid #00a8ff;
 }
 
-.box{
+.box {
     padding: 1%;
 }
 
-.box p{
+.box p {
     font-size: 90%;
     line-height: 145%;
+}
+
+.section-features .long-copy {
+    margin-bottom: 40px;
+}
+
+/* -------------------------------------------------------------------- */
+/* icons */
+/* -------------------------------------------------------------------- */
+
+.icon-big {
+    font-size: 300%;
+    display: block;
+    color: #00a8ff;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 
 /* -------------------------------------------------------------------- */
 /* icons */
 /* -------------------------------------------------------------------- */
+.section-meals {
+    padding: 0;
+}
 
-.icon-big{
-    font-size: 300%;
+.meals-showcase {
+    /* remove style from li */
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li {
     display: block;
+    float: left;
+    /* 25 * 4 = 100% */
+    width: 25%;
+}
+
+.meal-photo {
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+    /* image will be bit darker becuase we have opacity to 70%, below */
+    background-color: #000;    
+}
+
+.meal-photo img {
+    width: 100%;
+    height: auto;
+    /* img will be 115 %, initially */
+    transform: scale(1.15);    
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0.7;
+}
+
+.meal-photo img:hover {
+    /* images reduce to 103% from 115% */
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+/* -------------------------------------------------------------------- */
+/* how it works */
+/* -------------------------------------------------------------------- */
+
+.section-steps {
+    background-color: rgb(233, 230, 230);
+}
+
+.steps-box:first-child {
+    /* will select first child of step-box */
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child {
+    /* will select last child of step-box */
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen {
+    width: 40%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step div {
     color: #00a8ff;
+    border: 2px solid #00a8ff;
+    display: inline-block;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
     text-align: center;
-    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 150%;
+    margin-right: 50px;
+    float: left;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.btn-app:link,
+.btn-app:visited{
+    border: 0;
+}
+
+
+/* -------------------------------------------------------------------- */
+/* cities */
+/* -------------------------------------------------------------------- */
+
+.city-box{
+    padding: 1%;
+}
+
+.cities-img{
+    width: 100%;
+    height: auto;
+}
+
+.city-box ul{
+    list-style: none;
+    color: #797b7c;
+}
+
+.city-box div{
+    display: inline;
+    vertical-align: middle;
+    font-size: 95%;
+    line-height: 150%;
+    letter-spacing: 1px;
+}
+
+.icon-small{
+    font-size: 95%;    
+}
+
+.city-box .icon-small{
+    color: #fbc531;
+}
+
+.city-box h3{
+    padding-top: 15px;
+}
+
+
+
+/* -------------------------------------------------------------------- */
+/* testimonials */
+/* -------------------------------------------------------------------- */
+
+.section-testimonials {
+    background-image: linear-gradient(rgba(145, 143, 143, 0.50),rgba(145, 143, 143, 0.50)), url(img/ocean.jpg);
+    background-size: cover;
+    /* we want to see whole image */
+    background-position: center;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+.section-testimonials blockquote{
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+/* https://css-tricks.com/snippets/html/glyphs/ */
+blockquote::before{
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    /*  this is can be tricky, if you know postioning. To make it appear where we want it to appear. 
+    we have to make the parent postion to be relative. 
+    that is why I have made the position of Quote, above, to relative.*/
+    position: absolute;
+    top:5px;
+    left:0px;
+}
+
+.section-testimonials cite{
+    font-size: 95%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img{
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    /* need to move name in middle*/
+    vertical-align: middle;
+}
+
+
+/* -------------------------------------------------------------------- */
+/* Forms */
+/* -------------------------------------------------------------------- */
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* cannot have space */
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea{
+    height: 100px;
+}
+
+input[type=checkbox]{
+    margin:10px 5px 10px 0;
+}
+
+/* for chrome */
+*:focus{
+    outline: none;
+}
+
+/* -------------------------------------------------------------------- */
+/* footer */
+/* -------------------------------------------------------------------- */
+.section-footer{
+    background-color: #00a8ff;
+    font-style: italic;
+    font-size: 70%;
+    color: #044363;
+    max-height: 400px;
+    font-size: 70%;
+}
+
+.footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section-footer div{
+    display: block;
+}
+
+.my-notes{
+    font-style: italic;
+    line-height: 145%;
+}
+
+.copyrights{
+    margin-top: 125px;
+    line-height: 145%;
+    font-size: 80%;
+    color: #066899;
+}
+
+.my-contact{
+    text-align: right;
+}
+
+.my-contact div{
+    display: inline;
 }

@@ -1,93 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- https://necolas.github.io/normalize.css/ -->
-        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css"/>
-        <!-- http://www.responsivegridsystem.com -->
-        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css"/>
-        <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
 
-        <!--ionicons.com-->
-        <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+<head>
+    <!-- https://necolas.github.io/normalize.css/ -->
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css" />
+    <!-- http://www.responsivegridsystem.com -->
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
 
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
-        <title>Food</title>
-        
-    </head>
-    <body>
-        <!--HTML5-->
-        <header>
-            <nav>
-                <div class="row">
-                    <img src="resources/img/logo-white.png" alt="Health Food" class="logo">
-                    <ul class="main-nav">
-                        <li><a href="#">Food Delivery</a></li>
-                        <li><a href="#">See how it works</a></li>
-                        <li><a href="#">Our Suburbs</a></li>
-                        <li><a href="#">Sign up</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="hero-text-box">
-                <h1>Say no to junk food. </br>Say Namaste! to healty foods.</h1>
-                <a class="btn btn-full" href="#">I am always hungry</a>
-                <a class="btn btn-ghost" href="#">Show me</a>
-            </div>            
-        </header>
-        <section class="section-features">
+    <!--ionicons.com-->
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+    <title>Food</title>
+
+</head>
+
+<body>
+    <!--HTML5-->
+    <header>
+        <nav>
             <div class="row">
-                <h2>Get food fast &mdash; not fast food</h2>
-                <p class="long-copy">
-                    Hello, we’re healy food people, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
+                <img src="resources/img/logo-white.png" alt="Health Food" class="logo">
+                <ul class="main-nav">
+                    <li><a href="#">Food Delivery</a></li>
+                    <li><a href="#">See how it works</a></li>
+                    <li><a href="#">Our Suburbs</a></li>
+                    <li><a href="#">Sign up</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero-text-box">
+            <h1>Say no to junk food. </br>Say Namaste! to healty foods.</h1>
+            <a class="btn btn-full" href="#">I am always hungry</a>
+            <a class="btn btn-ghost" href="#">Show me</a>
+        </div>
+    </header>
+    <section class="section-features">
+        <div class="row">
+            <h2>Get food fast &mdash; not fast food</h2>
+            <p class="long-copy">
+                Hello, we’re healy food people, your new premium food delivery service. We know you’re always busy. No
+                time for cooking. So let us take care of that, we’re really good at it, we promise!
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col span-1-of-4 box">
+                <i class="ion-ios-calendar icon-big"></i>
+                <h3>Up to 365 days/year</h3>
+                <p>
+                    Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage.
+                    You can also choose to order more flexibly if that's your style.
                 </p>
             </div>
 
-            <div class="row">
-                <div class="col span-1-of-4 box">
-                    <i class="ion-ios-calendar icon-big"></i>
-                    <h3>Up to 365 days/year</h3>
-                    <p>
-                        Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.
-                    </p>
+            <div class="col span-1-of-4 box">
+                <i class="ion-ios-time  icon-big"></i>
+                <h3>Ready in 20 minutes</h3>
+                <p>
+                    You're only twenty minutes away from your delicious and super healthy meals delivered right to your
+                    home. We work with the best chefs in each town to ensure that you're 100% happy.
+                </p>
+            </div>
+
+            <div class="col span-1-of-4 box">
+                <i class="ion-ios-nutrition  icon-big"></i>
+                <h3>100% organic</h3>
+                <p>
+                    All our vegetables are fresh, organic and local. Animals are raised without added hormones or
+                    antibiotics. Good for your health, the environment, and it also tastes better!
+                </p>
+            </div>
+
+            <div class="col span-1-of-4 box">
+                <i class="ion-ios-basket  icon-big"></i>
+                <h3>1Order anything</h3>
+                <p>
+                    We don't limit your creativity, which means you can order whatever you feel like. You can also
+                    choose from our menu containing over 100 delicious meals. It's up to you!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-meals">
+        <ul class="meals-showcase clearfix">
+            <li>
+                <figure class="meal-photo">
+                    <!-- HTML5; also contains; image and caption for image -->
+                    <img src="resources/img/1.jpg" alt="d" />
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <!-- HTML5; also contains; image and caption for image -->
+                    <img src="resources/img/2.jpg" alt="b" />
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <!-- HTML5; also contains; image and caption for image -->
+                    <img src="resources/img/3.jpg" alt="a" />
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <!-- HTML5; also contains; image and caption for image -->
+                    <img src="resources/img/4.jpg" alt="d" />
+                </figure>
+            </li>
+        </ul>
+        <ul class="meals-showcase  clearfix">
+            <li>
+                <figure class="meal-photo">
+                    <!-- HTML5; also contains; image and caption for image -->
+                    <figure>
+                        <!-- HTML5; also contains; image and caption for image -->
+                        <img src="resources/img/5.jpg" alt="e" />
+                    </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <!-- HTML5; also contains; image and caption for image -->
+                    <img src="resources/img/6.jpg" alt="f" />
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <!-- HTML5; also contains; image and caption for image -->
+                    <img src="resources/img/7.jpg" alt="f" />
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <!-- HTML5; also contains; image and caption for image -->
+                    <img src="resources/img/7.jpg" alt="d" />
+                </figure>
+            </li>
+        </ul>
+    </section>
+
+    <section class="section-steps">
+        <div class="row">
+            <h2>How it works &mdash; Simple as 1, 2, 3</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-2 steps-box">
+                <img src="resources/img/app-iPhone.png" alt="iphone" class="app-screen">
+            </div>
+            <div class="col span-1-of-2  steps-box">
+                <div class="works-step">
+                    <div>1</div>
+                    <p>Choose the subscription plan that best fits your needs and sign up today.</p>
+                </div>
+                <div class="works-step">
+                    <div>2</div>
+                    <p>Order your delicious meal using our mobile app or website. Or you can even call us!</p>
+                </div>
+                <div class="works-step">
+                    <div>3</div>
+                    <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
                 </div>
 
-                <div class="col span-1-of-4 box">
-                    <i class="ion-ios-time  icon-big"></i>
-                    <h3>Ready in 20 minutes</h3>
-                    <p>
-                        You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.
-                    </p>
+                <a href="#" class="btn-app"><img src="resources/img/download-app.svg"> </a>
+                <a href="#" class="btn-app"><img src="resources/img/download-app-android.png"> </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-cities">
+        <div class="row">
+            <h2>We're currently in these cities</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-4 city-box">
+                <img src="resources/img/sydney-opera-house.jpg" class="cities-img">
+                <h3>Sydney</h3>
+                <ul>
+                    <li>
+                        <div><i class="ion-ios-people icon-small"></i></div>
+                        <div>600+ happy eaters</div>
+                    </li>
+                    <li>
+                        <div><i class="ion-ios-star icon-small"></i></div>
+                        <div>60+ top chefs</div>
+                    </li>
+                    <li>
+                        <div><i class="ion-logo-twitter icon-small"></i></div>
+                        <div><a href="#">@healthyfood</a></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col span-1-of-4 city-box">
+                <img src="resources/img/london.jpg" class="cities-img">
+                <h3>London</h3>
+                <ul>
+                    <li>
+                        <div><i class="ion-ios-people icon-small"></i></div>
+                        <div>1200+ happy eaters</div>
+                    </li>
+                    <li>
+                        <div><i class="ion-ios-star icon-small"></i></div>
+                        <div>60+ top chefs</div>
+                    </li>
+                    <li>
+                        <div><i class="ion-logo-twitter icon-small"></i></div>
+                        <div><a href="#">@healthyfood</a></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col span-1-of-4 city-box">
+                <img src="resources/img/lisbon-3.jpg" class="cities-img">
+                <h3>Lisbon</h3>
+                <ul>
+                    <li>
+                        <div><i class="ion-ios-people icon-small"></i></div>
+                        <div>1600+ happy eaters</div>
+                    </li>
+                    <li>
+                        <div><i class="ion-ios-star icon-small"></i></div>
+                        <div>60+ top chefs</div>
+                    </li>
+                    <li>
+                        <div><i class="ion-logo-twitter icon-small"></i></div>
+                        <div><a href="#">@healthyfood</a></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col span-1-of-4 city-box">
+                <img src="resources/img/berlin.jpg" class="cities-img">
+                <h3>Berlin</h3>
+                <ul>
+                    <li>
+                        <div><i class="ion-ios-people icon-small"></i></div>
+                        <div>2300+ happy eaters</div>
+                    </li>
+                    <li>
+                        <div><i class="ion-ios-star icon-small"></i></div>
+                        <div>60+ top chefs</div>
+                    </li>
+                    <li>
+                        <div><i class="ion-logo-twitter icon-small"></i></div>
+                        <div><a href="#">@healthyfood</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-testimonials">
+        <div class="row">
+            <h2>Our customers can't live without us</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-3">
+                <blockquote>
+                    Healty food is just awesome! I just launched a startup which leaves me with no time for cooking, so
+                    Healty-Food is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
+                    <cite>
+                        <img src="resources/img/customer-1.jpg">
+                        Alberto Duncan
+                    </cite>
+                </blockquote>
+            </div>
+            <div class="col span-1-of-3">
+                <blockquote>
+                    Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food
+                    delivery here in Lisbon, but no one comes even close to Healty-Food. Me and my family are so in
+                    love!
+                    <cite>
+                        <img src="resources/img/customer-2.jpg">
+                        Joania Silva
+                    </cite>
+                </blockquote>
+            </div>
+            <div class="col span-1-of-3">
+                <blockquote>
+                    I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and
+                    ended up with Healty-Food. Best food delivery service in the Bay Area. Keep up the great work!
+                    <cite>
+                        <img src="resources/img/customer-3.jpg">
+                        Milton Chapman
+                    </cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-form">
+        <div class="row">
+            <h2>We're happy to hear from you</h2>
+        </div>
+        <div class="row">
+            <form method="POST" action="submit" class="contact-form">
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="text" name="name" id="name" placeholder="Your name" required/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="email" name="email" id="email" placeholder="Email Address" required/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>How did you hear about us?</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <select name="fund-us" id="find-us">
+                            <option value="friends">friends</option>
+                            <option value="search" selected>Search Engine</option>
+                            <option value="ad">Advertisement</option>
+                            <option value="other">Others</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="news">Newsletter</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="checkbox" name="news" id="news" checked> Yes, please 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>Notes</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <textarea name="message" placeholder="Your Message"></textarea>
+                    </div>
                 </div>
 
-                <div class="col span-1-of-4 box">
-                    <i class="ion-ios-nutrition  icon-big"></i>
-                    <h3>100% organic</h3>
-                    <p>
-                        All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!
-                    </p>
-                </div>
+                <div class="row">
+                        <div class="col span-1-of-3">
+                            &nbsp;
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </section>
 
-                <div class="col span-1-of-4 box">
-                    <i class="ion-ios-basket  icon-big"></i>
-                    <h3>1Order anything</h3>
-                    <p>
-                        We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!
-                    </p>
+    <footer class="section-footer">
+        <div class="row footer">
+            <div class="col span-1-of-2">
+                <div class="my-notes">
+                    I have created to this page just to explore with HTML5 and CSS3.</br> I used images from Internet and I have
+                    no right on them.
+                </div>
+                <div class="copyrights">
+                    Copyrights &#169; 2019 Rajen Shrestha
                 </div>
             </div>
-        </section>
-    </body>
+            <div class="col span-1-of-2 rightbox">
+                <div class="my-contact">
+                    <div><i class="ion-ios-mail icon-small"></i></div>
+                    <div>rajen.shrestha@gmail.com</div>                    
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
 </html>
-
-<!--
-
-
-
-
-
-
-
-
-
--->
