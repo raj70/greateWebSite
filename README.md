@@ -48,3 +48,13 @@ https://imagecompressor.com/
 
 # valid html
 https://validator.w3.org/nu/#textarea
+
+# css3
+complex gradients, shape, clips, masks, background blending, image filters CSS variables,
+responseive images 
+
+FlexBox: row
+
+CSS GRID: 2D grid
+
+Oops. where is CSS3?
